@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_lichniy_cabinet_rol",
+  "info": {
+    "displayName": "Роль"
+  },
+  "options": {},
+  "attributes": {
+    "profil": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profile.profile"
+    },
+    "rol": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rol.rol"
+    }
+  }
+}

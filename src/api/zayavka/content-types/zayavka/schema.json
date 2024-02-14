@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zayavkas",
+  "info": {
+    "singularName": "zayavka",
+    "pluralName": "zayavkas",
+    "displayName": "Заявка",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "stages": {
+      "type": "json"
+    },
+    "description": {
+      "type": "string"
+    },
+    "firstData": {
+      "type": "json"
+    },
+    "history": {
+      "type": "json"
+    },
+    "files": {
+      "type": "json"
+    },
+    "payment": {
+      "type": "json"
+    },
+    "lichnyj_kabinet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lichnyj-kabinet.lichnyj-kabinet",
+      "inversedBy": "zayavkas"
+    },
+    "profil": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profile.profile"
+    }
+  }
+}

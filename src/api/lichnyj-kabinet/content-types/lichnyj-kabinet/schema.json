@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lichnyj_kabinets",
+  "info": {
+    "singularName": "lichnyj-kabinet",
+    "pluralName": "lichnyj-kabinets",
+    "displayName": "Личный кабинет",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "profils": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::profile.profile",
+      "inversedBy": "lichnyj_kabinets"
+    },
+    "zayavitels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::zayavitel.zayavitel",
+      "mappedBy": "lichnyj_kabinet"
+    },
+    "zayavkas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::zayavka.zayavka",
+      "mappedBy": "lichnyj_kabinet"
+    },
+    "rol": {
+      "type": "component",
+      "repeatable": true,
+      "component": "lichniy-cabinet.rol"
+    }
+  }
+}

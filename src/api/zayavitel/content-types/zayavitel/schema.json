@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zayavitels",
+  "info": {
+    "singularName": "zayavitel",
+    "pluralName": "zayavitels",
+    "displayName": "Заявитель",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "inn": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Физическое лицо",
+        "ИП",
+        "Юридическое лицо"
+      ]
+    },
+    "snils": {
+      "type": "string"
+    },
+    "kpp": {
+      "type": "string"
+    },
+    "lichnyj_kabinet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lichnyj-kabinet.lichnyj-kabinet",
+      "inversedBy": "zayavitels"
+    }
+  }
+}
